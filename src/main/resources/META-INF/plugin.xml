@@ -1,0 +1,17 @@
+<idea-plugin>
+    <id>com.hmemcpy.scala-heapview</id>
+    <name>Heap Allocations Viewer for Scala</name>
+    <version>0.0.1-SNAPSHOT</version>
+    <vendor>Igal Tabachnik</vendor>
+
+    <description>Highlights non-obvious boxing, closure, and function allocations in Scala.</description>
+
+    <idea-version since-build="213"/>
+
+    <depends>org.intellij.scala</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <annotator language="Scala" implementationClass="heapview.HeapAllocationsAnnotator" />
+    </extensions>
+
+</idea-plugin>
