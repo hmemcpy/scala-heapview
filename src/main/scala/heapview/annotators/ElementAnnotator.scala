@@ -1,8 +1,7 @@
-package heapview
+package heapview.annotators
 
 import org.jetbrains.plugins.scala.annotator.ScalaAnnotationHolder
 import org.jetbrains.plugins.scala.lang.psi.api.ScalaPsiElement
-import heapview.annotators.BoxingOccurrenceAnnotator
 
 abstract class ElementAnnotator[T: reflect.ClassTag] {
 
@@ -21,7 +20,7 @@ object ElementAnnotator extends ElementAnnotator[ScalaPsiElement] {
 
   // we already have typeclasses at home :(
   private val Instances =
-    BoxingOccurrenceAnnotator :: Nil
+    HeapAllocationAnnotator :: Nil
 
   override def annotate(element: ScalaPsiElement, typeAware: Boolean)(implicit
       holder: ScalaAnnotationHolder

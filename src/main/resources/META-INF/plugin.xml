@@ -11,7 +11,7 @@
     <depends>org.intellij.scala</depends>
 
     <extensions defaultExtensionNs="com.intellij">
-        <annotator language="Scala" implementationClass="heapview.HeapAllocationsAnnotator" />
+        <annotator language="Scala" implementationClass="heapview.HeapViewAnnotator" />
     </extensions>
 
 </idea-plugin>
